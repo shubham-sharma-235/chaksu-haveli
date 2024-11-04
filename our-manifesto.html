@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaksu Haveli</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/other-pages.css">
+  </head>
+  <body>
+    <div class="main">
+
+      <div class="hero-section other-page-hero-section">
+        <div class="hero-video">
+          <img
+            class="hero-video-desktop"
+            src="./images/hotel-img-1.JPG"
+            autoplay
+            muted
+            loop
+          ></img>
+          <div class="Hero-heading" id="resizingDiv">Our Manifesto</div>
+        </div>
+      </div>
+
+      <!-- ------------------------- -->
+
+      <div class="navbar" data-aos="fade-down" data-aos-duration="800">
+        <div class="nav-menu">
+          <div class="menu-button" id="menuButton">
+            <i class='bx bx-menu'></i>
+          </div>
+        </div>
+        
+        <div class="nav-logo">
+          <h2>Chaksu Haveli</h2>
+        </div>
+        
+        <div class="nav-right">
+          <a href="#">Reserve</a>
+        </div>
+      </div>
+      
+      <div class="sidebar" id="sidebar">
+        <div class="header">
+          <div class="logo" id="resizingDiv">Chaksu Haveli</div>
+          <button class="close-button" id="closeButton">
+            <i style="transform: rotate(45deg)" class="bx bx-cross"></i>
+          </button>
+        </div>
+
+        <ul>
+          <li>
+            <img src="./images/sidebar-arrow-icon.svg" alt="" />
+            <a href="#"> Link One </a>
+          </li>
+    
+          <li><a href="#">Link Two</a></li>
+          <li><a href="#">Link Three</a></li>
+          <li><a href="#">Link Four</a></li>
+          <li><a href="#">Link Five</a></li>
+          <li><a href="#">Link Six</a></li>
+        </ul>
+
+      </div>
+      
+      <!-- ------------------ -->
+
+      <div class="about-section"  id="about">
+        <div class="common-heading about-us-heading" data-aos="zoom">
+          <h2>Our Manifesto</h2>
+          <!-- <hr> -->
+        </div>
+        <div class="common-para" data-aos="fade-up" style="width: 60%;">
+          <p>We believe the World Needs a Break. A break in a place that nurtures your soul—surrounded by nature, art, tradition, and a community of simple, kind people.</p>
+
+          <p>In a world far from the hustle and bustle, we believe simplicity is the ultimate sophistication. True luxury lies in minimalism, and sometimes, all you need is less.</p>
+
+          <p>We believe in going local, in embracing culture with a modern, creative edge. We believe in harmony and oneness—where nature, art, and people coexist in a symphony.</p>
+
+          <p>Life, to us, is about realizing your purpose and potential. We believe in giving back to the community by fulfilling that purpose. Our familial heritage and traditions are woven into every aspect of your experience, custom-tailored just for you.</p>
+
+          <p>We aim to introduce you to a way of living that is as ancient as time but often forgotten today. Our unique heritage makes Chaksu Haveli unlike any other, and our ethos of simplicity and luxury redefines what it means to truly live. We believe in holistically nourishing your soul and redefining ultimate luxury.</p>
+
+        </div>
+        <!-- <div class="learn-more-btn about-btn">
+            <a href="#">
+                <button>Learn More</button>
+            </a>
+        </div> -->
+      </div>
+
+      <!-- ------------------------- -->
+
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Left Side: Company Name & Tagline -->
+          <div class="footer-company">
+            <h2>Chaksu Haveli</h2>
+            <p>Your tagline goes here.</p>
+          </div>
+
+          <!-- Right Side: Link Columns -->
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3>About Us</h3>
+              <a href="#">Our Story</a>
+              <a href="#">Mission</a>
+              <a href="#">Team</a>
+            </div>
+            <div class="footer-column">
+              <h3>Services</h3>
+              <a href="#">Consulting</a>
+              <a href="#">Support</a>
+              <a href="#">Pricing</a>
+            </div>
+            <div class="footer-column">
+              <h3>Follow Us</h3>
+              <a href="#">Instagram</a>
+              <a href="#">Youtube</a>
+              <a href="#">Facebook</a>
+            </div>
+            <div class="footer-column">
+              <h3>Contact</h3>
+              <a href="#">Contact Us</a>
+              <a href="#">Locations</a>
+              <a href="#">FAQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Links for Terms & Conditions, Privacy Policy, etc. -->
+        <div class="footer-bottom">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>   
+      const resizingDiv = document.getElementById('resizingDiv');
+      
+      window.addEventListener('scroll', () => {
+          // Get the scroll position
+          const scrollPosition = window.scrollY;
+          // Calculate new font size
+          const newFontSize = Math.max(10, 100 - scrollPosition / 10); // Min font size of 20px
+          // Update the font size of the div
+          resizingDiv.style.fontSize = `${newFontSize}px`;
+      });
+    </script>
+    
+  </body>
+</html>
