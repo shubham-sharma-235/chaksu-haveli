@@ -1,0 +1,34 @@
+.other-page-hero-section img{
+    width: 100%;
+    height: 95vh;
+}
+.common-para{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.common-para p{ 
+    width: 100%;
+    padding: 8px 0;
+    width: 78vw;
+}
+
+@media(max-width: 800px){
+    .hero-video-desktop{
+        display: block;
+    }
+    .hero-video {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .other-page-hero-section img{
+        width: 100%;
+        height: 80vh;
+    }
+    .Hero-heading{
+        font-size: 2vw;
+    }
+    
+}
