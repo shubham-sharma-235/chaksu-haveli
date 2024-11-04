@@ -789,6 +789,11 @@ footer{
 
 
 @media(max-width: 800px){
+    .sidebar {
+        left: -350px;
+        width: 350px;
+        padding: 4rem 2rem;
+    }
     .hero-video-desktop{
         display: none;
     }

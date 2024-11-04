@@ -1,3 +1,6 @@
+.about-section {
+    padding-bottom: 1rem!important;
+}
 .other-page-hero-section img{
     width: 100%;
     height: 95vh;
@@ -10,7 +13,17 @@
 .common-para p{ 
     width: 100%;
     padding: 8px 0;
-    width: 78vw;
+}
+
+.image-text-container {
+    margin-top: 2rem;
+}
+.image-text-container_text h2 {
+    margin: 2rem 0;
+    font-size: 2.6vw;
+}
+.image-text-container_text P{
+    margin: 1rem 0;
 }
 
 @media(max-width: 800px){
