@@ -45,3 +45,160 @@
     }
     
 }
+
+
+/* ---------------------------------------- */
+
+.reservation-page {
+    display: flex;
+    max-width: 1000px;
+    margin: 40px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 4rem;
+}
+
+/* Calendar Section */
+.calendar-section {
+  flex: 7;
+  padding: 20px;
+  text-align: center;
+}
+
+.calendar-section h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #796C5C;
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Arrows */
+.calendar-section h2 span {
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #796C5C;
+  user-select: none;
+}
+
+.calendar-section h2 .disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Calendar Table */
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.calendar th, .calendar td {
+  width: 14.28%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+
+.calendar th {
+  background-color: #796C5C;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.calendar td {
+  background-color: #f9f9f9;
+}
+
+/* Selected date style */
+.calendar td.selected {
+  background-color: #948573;
+  color: #fff;
+}
+
+/* Past dates style */
+.calendar td.passed {
+  background-color: #f0f0f0;
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+/* Features Section */
+.features-section {
+  flex: 3;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.features-section h2 {
+  text-align: left;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #796C5C;
+  margin-bottom: 15px;
+}
+
+.feature-item {
+  margin-bottom: 20px;
+}
+
+.feature-item h3 {
+  color: #796C5C;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.feature-item p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Total Price Container */
+.total-price-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #796C5C;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 1.2em;
+}
+
+.total-price-container .price {
+  font-weight: bold;
+}
+
+.total-price-container .lets-go-btn {
+  background-color: #ffcc33;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .reservation-page {
+    flex-direction: column;
+    align-items: center;
+  }
+  .features-section {
+    margin-top: 20px;
+  }
+}
+
+

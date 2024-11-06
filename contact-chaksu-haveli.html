@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaksu Haveli - Reservation</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/other-pages.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <style>
+        /* ------------------------ */
+        body{
+            background-color: #7c6f603c;
+        }
+         #container {
+          border: solid 3px #474544;
+          max-width: 1000px;
+          margin: 0px auto;
+          position: relative;
+          padding-top: 3rem;
+          background-color: #FEFCF8;
+        }
+        .contact-container{
+            background-image: url('./images/background-img-two.jpg');
+            padding: 4rem 0;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            margin-top: 6rem;
+        }
+        .contact-container h1{
+            line-height: 30px;
+        }
+        form {
+            padding: 37.5px;
+            padding-bottom: 0;
+            margin: 50px 0;
+        }
+        .contact-container span{
+            font-size: 10px;
+        }
+        
+        .contact-container h1 {
+          color: #474544;
+          font-size: 32px;
+          font-weight: 700;
+          letter-spacing: 7px;
+          padding-bottom: 18px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        
+        .underline {
+          border-bottom: solid 2px #474544;
+          margin: -0.512em auto;
+          width: 80px;
+        }
+        
+        .icon_wrapper {
+          margin: 50px auto 0;
+          width: 100%;
+        }
+        
+        .icon {
+          display: block;
+          fill: #474544;
+          height: 50px;
+          margin: 0 auto;
+          width: 50px;
+        }
+        
+        .email {
+        	float: right;
+        	width: 45%;
+        }
+        
+        .contact-container input[type='text'], [type='email'], select, textarea {
+        	background: none;
+          border: none;
+        	border-bottom: solid 2px #474544;
+        	color: #474544;
+        	font-size: 1.000em;
+          font-weight: 400;
+          letter-spacing: 1px;
+        	margin: 0em 0 1.875em 0;
+        	padding: 0 0 0.875em 0;
+          text-transform: uppercase;
+        	width: 100%;
+        	-webkit-box-sizing: border-box;
+        	-moz-box-sizing: border-box;
+        	-ms-box-sizing: border-box;
+        	-o-box-sizing: border-box;
+        	box-sizing: border-box;
+        	-webkit-transition: all 0.3s;
+        	-moz-transition: all 0.3s;
+        	-ms-transition: all 0.3s;
+        	-o-transition: all 0.3s;
+        	transition: all 0.3s;
+        }
+        
+        input[type='text']:focus, [type='email']:focus, textarea:focus {
+        	outline: none;
+        	padding: 0 0 0.875em 0;
+        }
+        
+        .message {
+        	float: none;
+        }
+        
+        .name {
+        	float: left;
+        	width: 45%;
+        }
+        
+        select {
+          background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+          outline: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+        }
+        
+        select::-ms-expand {
+          display: none;
+        }
+        
+        .subject {
+          width: 100%;
+        }
+        
+        .telephone {
+          width: 100%;
+        }
+        
+        textarea {
+        	line-height: 150%;
+        	height: 150px;
+        	resize: none;
+          width: 100%;
+        }
+        
+        ::-webkit-input-placeholder {
+        	color: #474544;
+        }
+        
+        :-moz-placeholder { 
+        	color: #474544;
+        	opacity: 1;
+        }
+        
+        ::-moz-placeholder {
+        	color: #474544;
+        	opacity: 1;
+        }
+        
+        :-ms-input-placeholder {
+        	color: #474544;
+        }
+        
+        #form_button {
+          background: none;
+          border: solid 2px #474544;
+          color: #474544;
+          cursor: pointer;
+          display: inline-block;
+          font-family: 'Helvetica', Arial, sans-serif;
+          font-size: 0.875em;
+          font-weight: bold;
+          outline: none;
+          padding: 20px 35px;
+          text-transform: uppercase;
+          -webkit-transition: all 0.3s;
+        	-moz-transition: all 0.3s;
+        	-ms-transition: all 0.3s;
+        	-o-transition: all 0.3s;
+        	transition: all 0.3s;
+        }
+        
+        #form_button:hover {
+          background: #474544;
+          color: #F2F3EB;
+        }
+        
+        @media screen and (max-width: 768px) {
+          #container {
+            margin: 20px auto;
+            width: 95%;
+          }
+        }
+        
+        @media screen and (max-width: 480px) {
+          h1 {
+            font-size: 26px;
+          }
+          
+          .underline {
+            width: 68px;
+          }
+          
+          #form_button {
+            padding: 15px 25px;
+          }
+        }
+        
+        @media screen and (max-width: 420px) {
+          h1 {
+            font-size: 18px;
+          }
+          
+          .icon {
+            height: 35px;
+            width: 35px;
+          }
+          
+          .underline {
+            width: 53px;
+          }
+          
+          input[type='text'], [type='email'], select, textarea {
+            font-size: 0.875em;
+          }
+        }
+        /* ------------------ */
+        .socials-container{
+            display: flex;
+            flex-direction: column;
+            margin: 14px;
+        }
+        .socials-container a{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin: .4rem 0;
+            border-radius: 4px;
+            padding: 1rem;
+            font-weight: 500;
+            background-color: #f3eee594;
+            border: 1px solid #858484;
+            color: #000;
+            transition: all ease-in-out .2s;
+        }
+        .socials-container i{
+            margin-right: 6px;
+        }
+        .socials-container a:hover{
+
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <div class="hero-section other-page-hero-section">
+            <div class="hero-video">
+              <img
+                class="hero-video-desktop"
+                src="./images/IMG-20240917-WA0038.jpg"
+                autoplay
+                muted
+                loop
+              ></img>
+              <div class="Hero-heading" id="resizingDiv">Contact Us</div>
+            </div>
+        </div>
+      <!-- ------------------------- -->
+
+      <div class="navbar" data-aos="fade-down" data-aos-duration="800">
+        <div class="nav-menu">
+          <div class="menu-button" id="menuButton">
+            <i class='bx bx-menu'></i>
+          </div>
+        </div>
+        
+        <div class="nav-logo">
+          <h2>Chaksu Haveli</h2>
+        </div>
+        
+        <div class="nav-right">
+          <a href="#">Reserve</a>
+        </div>
+      </div>
+      
+      <div class="sidebar" id="sidebar">
+        <div class="header">
+          <div class="logo" id="resizingDiv">Chaksu Haveli</div>
+          <button class="close-button" id="closeButton">
+            <i style="transform: rotate(45deg)" class="bx bx-cross"></i>
+          </button>
+        </div>
+
+        <ul>
+          <li>
+            <img src="./images/sidebar-arrow-icon.svg" alt="" />
+            <a href="#"> Link One </a>
+          </li>
+    
+          <li><a href="#">Link Two</a></li>
+          <li><a href="#">Link Three</a></li>
+          <li><a href="#">Link Four</a></li>
+          <li><a href="#">Link Five</a></li>
+          <li><a href="#">Link Six</a></li>
+        </ul>
+
+      </div>
+      
+      <!-- ------------------------- -->
+      
+      <div class="contact-container" data-aos="fade-up">
+        <div id="container">
+            <h1>&bull;Contact&bull;<br> <span>Chaksu Haveli</span></h1>
+            <div class="underline">
+            </div>
+            <form action="#" method="post" id="contact_form">
+              <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="My name is" name="name" id="name_input" required>
+              </div>
+              <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+              </div>
+              <div class="telephone">
+                <label for="name"></label>
+                <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+              </div>
+              <div class="subject">
+                <label for="subject"></label>
+                <select placeholder="Subject line" name="subject" id="subject_input" required>
+                  <option disabled hidden selected>Subject line</option>
+                  <option>I'd like to start a project</option>
+                  <option>I'd like to ask a question</option>
+                  <option>I'd like to make a proposal</option>
+                </select>
+              </div>
+              <div class="message">
+                <label for="message"></label>
+                <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+              </div>
+              <div class="submit">
+                <input type="submit" value="Send Message" id="form_button" />
+              </div>
+            </form>
+          </div>    
+      </div>
+
+      
+
+      <!-- ------------------------- -->
+
+        <footer class="footer">
+          <div class="footer-container">
+            <!-- Left Side: Company Name & Tagline -->
+            <div class="footer-company">
+              <h2>Chaksu Haveli</h2>
+              <p>Your tagline goes here.</p>
+            </div>
+
+          <!-- Right Side: Link Columns -->
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3>About Us</h3>
+              <a href="#">Our Story</a>
+              <a href="#">Mission</a>
+              <a href="#">Team</a>
+            </div>
+            <div class="footer-column">
+              <h3>Services</h3>
+              <a href="#">Consulting</a>
+              <a href="#">Support</a>
+              <a href="#">Pricing</a>
+            </div>
+            <div class="footer-column">
+              <h3>Follow Us</h3>
+              <a href="#">Instagram</a>
+              <a href="#">Youtube</a>
+              <a href="#">Facebook</a>
+            </div>
+            <div class="footer-column">
+              <h3>Contact</h3>
+              <a href="#">Contact Us</a>
+              <a href="#">Locations</a>
+              <a href="#">FAQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Links for Terms & Conditions, Privacy Policy, etc. -->
+        <div class="footer-bottom">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+  </body>
+</html>
