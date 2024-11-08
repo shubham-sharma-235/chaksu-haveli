@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chaksu Haveli - Our Manifesto</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/other-pages.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <style>
+      .common-para {
+        padding: 10px 0!important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+
+      <div class="hero-section other-page-hero-section">
+        <div class="hero-video">
+          <img
+            class="hero-video-desktop"
+            src="../images/cultural-dance-large-screen.jpg"
+            autoplay
+            muted
+            loop
+          ></img>
+          <!-- <div class="Hero-heading" id="resizingDiv">Our Manifesto</div> -->
+        </div>
+      </div>
+
+      <!-- ------------------------- -->
+
+      <div class="navbar" data-aos="fade-down" data-aos-duration="800">
+        <div class="nav-menu">
+          <div class="menu-button" id="menuButton">
+            <i class='bx bx-menu'></i>
+          </div>
+        </div>
+        
+        <div class="nav-logo">
+          <h2>Chaksu Haveli</h2>
+        </div>
+        
+        <div class="nav-right">
+          <a href="#">Reserve</a>
+        </div>
+      </div>
+      
+      <div class="sidebar" id="sidebar">
+        <div class="header">
+          <div class="logo" id="resizingDiv">Chaksu Haveli</div>
+          <button class="close-button" id="closeButton">
+            <i style="transform: rotate(45deg)" class="bx bx-cross"></i>
+          </button>
+        </div>
+
+        <ul>
+          <li>
+            <img src="./images/sidebar-arrow-icon.svg" alt="" />
+            <a href="./index.html">Home</a>
+          </li>
+          <li><a href="./index.html#about">About us</a></li>
+          <li><a href="./our-manifesto.html">Our Manifesto</a></li>
+          <li><a href="./our-restoration.html">Our Restoration</a></li>
+          <li><a href="./our-sustainibility.html">Our Sustainability</a></li>
+          <li><a href="./our-community-impact.html">Our Community Impact</a></li>
+          <li><a href="./contact-chaksu-haveli.html">Contact Us</a></li>
+        </ul>
+
+      </div>
+      
+      <!-- ------------------ -->
+
+      <div class="about-section"  id="about">
+        <div class="common-heading about-us-heading">
+          <h2>Chaksu Cultural Centre & Cultural Tour</h2>
+        </div>
+        <div class="common-para" style="width: 60%;">
+          <p>
+            Explore the heart of Chaksu's vibrant artistic heritage with our curated <b>Chaksu Cultural Centre & Cultural Tour.</b> This experience takes you through the haveli’s art room, where traditional Rajasthani art is on display, followed by live musical performances that evoke the spirit of the region. As night falls, a mesmerizing light and sound show will unfold, narrating the history of Chaksu Haveli. Continue your journey with visits to local artisans, including tattoo artists, dancers, and women working at kantha looms, showcasing their intricate crafts passed down through generations. This tour offers a structured yet deeply immersive glimpse into the artistic and cultural legacy of Chaksu village.
+          </p>
+        </div>
+      </div>
+
+      <!-- ------------------------- -->
+
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Left Side: Company Name & Tagline -->
+          <div class="footer-company">
+            <h2>Chaksu Haveli</h2>
+            <p>Your tagline goes here.</p>
+          </div>
+
+          <!-- Right Side: Link Columns -->
+          <div class="footer-columns">
+            <div class="footer-column">
+              <h3>About Us</h3>
+              <a href="#">Our Story</a>
+              <a href="#">Mission</a>
+              <a href="#">Team</a>
+            </div>
+            <div class="footer-column">
+              <h3>Services</h3>
+              <a href="#">Consulting</a>
+              <a href="#">Support</a>
+              <a href="#">Pricing</a>
+            </div>
+            <div class="footer-column">
+              <h3>Follow Us</h3>
+              <a href="#">Instagram</a>
+              <a href="#">Youtube</a>
+              <a href="#">Facebook</a>
+            </div>
+            <div class="footer-column">
+              <h3>Contact</h3>
+              <a href="#">Contact Us</a>
+              <a href="#">Locations</a>
+              <a href="#">FAQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Links for Terms & Conditions, Privacy Policy, etc. -->
+        <div class="footer-bottom">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>   
+      const resizingDiv = document.getElementById('resizingDiv');
+      
+      window.addEventListener('scroll', () => {
+          // Get the scroll position
+          const scrollPosition = window.scrollY;
+          // Calculate new font size
+          const newFontSize = Math.max(10, 100 - scrollPosition / 10); // Min font size of 20px
+          // Update the font size of the div
+          resizingDiv.style.fontSize = `${newFontSize}px`;
+      });
+    </script>
+    
+  </body>
+</html>
