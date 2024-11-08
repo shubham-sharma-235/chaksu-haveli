@@ -45,41 +45,13 @@ closeButton.addEventListener('click', () => {
     }, 500); // Duration should match the transition time
 });
 
-// ====================================
-
-const videoContainer = document.getElementById("ourStoryVideoContainer");
-const video = document.getElementById("ourStoryVideo");
-const section = document.querySelector(".our-story-video-section");
-
-// Scroll event listener
-window.addEventListener("scroll", () => {
-    // Calculate the scroll trigger point (20% of section height)
-    const sectionTop = section.offsetTop;
-    const triggerPoint = sectionTop + section.offsetHeight * 0.2;
-    const scrollPosition = window.scrollY + window.innerHeight;
-
-    // Check if user has scrolled to 20% into the section
-    if (scrollPosition > triggerPoint) {
-        videoContainer.classList.add("enlarged"); // Apply enlarged class
-    } else {
-        videoContainer.classList.remove("enlarged"); // Remove enlarged class
-        video.pause(); // Pause video when out of range
-    }
-});
-
-// Play video after transition ends and only when enlarged
-videoContainer.addEventListener("transitionend", () => {
-    if (videoContainer.classList.contains("enlarged")) {
-        video.play();
-    }
-});
 
 // ====================================
 
 const container = document.querySelector('.snipts-container');
 let scrollAmount = 0;
-const scrollStep = 320; // Adjust scroll step based on card width
-const pauseTime = 3500; // Pause duration in milliseconds (1.5 seconds)
+const scrollStep = 320; 
+const pauseTime = 5000; 
 
 // Function to handle automatic sudden scrolling
 function autoScroll() {

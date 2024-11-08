@@ -297,6 +297,16 @@ body::-webkit-scrollbar-thumb {
 
 /* ------------------------------------------- */
 
+.essentials-section{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    flex-direction: column;
+    background-color: #fcf5ec;
+}
+
 .snipts-section{
     display: flex;
     flex-direction: column;
@@ -306,8 +316,8 @@ body::-webkit-scrollbar-thumb {
     
 }
 .snipt-card img{
-    height: 34vw;
-    width: 28vw;
+    height: 28vw;
+    width: 22vw;
 }
 .snipt-card{
     display: flex;
@@ -449,7 +459,6 @@ video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fcf5ec;
     justify-content: center;
     padding: 2rem 0;
 }
@@ -472,7 +481,7 @@ video {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .experience-item img {
-    height: 30rem;
+    height: 32vw;
     width: 100%;
     transition: filter 0.5s ease;
     transition: transform 0.8s ease;
@@ -616,6 +625,7 @@ video {
     font-weight: 100;
 }
 
+
 /* ------------------------------------------- */
 
 .image-text-container{
@@ -710,6 +720,7 @@ footer{
     color: #f0f0f0;
     padding: 2rem 1.5rem;
     font-family: Arial, sans-serif;
+    width:100%;
 }
 
 .footer-container {
