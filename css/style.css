@@ -521,30 +521,30 @@ video {
     align-items: center; /* Center horizontally */
     opacity: 0;
     text-align: center;
-    padding: 0 3rem;
+    padding: 0 4rem;
     line-height: 24px;
     font-size: 1.1rem;
     transform: translateY(100%); /* Start below the view */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for opacity and movement */
-    
 }
 .experience-item:hover .experience-overlay {
     opacity: 1; /* Show overlay on hover */
     transform: translateY(0); /* Move to the original position */
 }
 .explore-button {
-    background-color: #55504b;
+    background-color: #fff;
     border: none;
-    display: none;
     border: 1px solid #888;
     padding: 10px 20px;
-    color: white;
+    padding: 1rem 3rem;
+    color: #000;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 1rem;
     transition: background-color 0.3s ease;
+    display: none;
 }
 .explore-button:hover {
-    background-color: #e91e63;
+    background-color: #ffffff9a;
 }
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -560,39 +560,31 @@ video {
         padding: 8px 16px; /* Adjust button size */
     }
 }
-
 .about-btn a{
     border: none;
 }
-.about-btn a{
-    padding: 2rem 10rem;
-    padding: 21px 55px;
-    color: #796c5c;
-    font-family: 'Arboria Book';
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1;
-    text-align: center;
+
+.about-btn a button {
+    position: relative;
+    z-index: 1;
+    border: none;
+    border-bottom: 2px solid var(--heading-color);
+    background-color: transparent;
+    width: 24rem!important;
+    height: 3.8rem!important;
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: .44rem;
-    -webkit-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in
+    cursor: pointer;
+    color: var(--heading-color);
+    transition: color 0.4s ease;
+    letter-spacing: 2px;
+}
+.about-btn a button:hover{
+    color: #fff!important;
 }
 .about-btn a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #796C5C!important;
-    z-index: 0;
-    transition: height 0.3s ease;
+    background-color: #7C6F60!important;
 }
-.about-btn a:hover button {
-    color: #fff!important; 
-}
-
 
 /* ------------------------------------------- */
 
