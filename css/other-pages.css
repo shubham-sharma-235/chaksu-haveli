@@ -70,7 +70,7 @@
   justify-content: space-between;
   align-items: center;
   color: #796C5C;
-  font-size: 1.8em;
+  font-size: 1.4em;
   font-weight: 600;
   margin-bottom: 15px;
 }
@@ -78,7 +78,7 @@
 /* Arrows */
 .calendar-section h2 span {
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #796C5C;
   user-select: none;
 }
@@ -121,6 +121,24 @@
   background-color: #948573;
   color: #fff;
 }
+.calendar td.reserved {
+  background-color: #414040;
+  color: #fff;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.calendar td.reserved .reserved-label {
+  display: block;
+  font-size: 0.8em;
+  color: #fff;
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
 
 /* Past dates style */
 .calendar td.passed {
@@ -159,7 +177,21 @@
   font-size: 1em;
   color: #555;
 }
-
+.open-from-jan{
+  position: fixed;
+  bottom: 70px;
+  left: 0;
+  width: 100%; 
+  height: 1.4rem;
+  background-color: #b5b0ab;
+  padding: 1.6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.open-from-jan h5{
+  font-weight: 200;
+}
 /* Total Price Container */
 .total-price-container {
   position: fixed;
@@ -171,7 +203,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 10px;
   font-size: 1.2em;
 }
 
@@ -180,14 +212,20 @@
 }
 
 .total-price-container .lets-go-btn {
-  background-color: #ffcc33;
+  background-color: #fff;
   color: #333;
   border: none;
+  font-weight: 100;
   padding: 10px 20px;
-  font-size: 1em;
+  font-size: .9em;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
+transition: all ease-in-out .3s;
+}
+.total-price-container .lets-go-btn:hover{
+  background-color: #282828;
+  color: #bbb;
 }
 
 /* Mobile Responsiveness */
@@ -198,6 +236,20 @@
   }
   .features-section {
     margin-top: 20px;
+  }
+  .open-from-jan h5{
+    font-weight: 200;
+    font-size: 12px;
+  }
+  .calendar td.reserved {
+    padding: 18px;
+  }
+  .calendar td {
+    background-color: #f9f9f9;
+  }
+  .calendar td.reserved .reserved-label {
+    font-size: 0.6em;
+    margin-left: -10px;
   }
 }
 

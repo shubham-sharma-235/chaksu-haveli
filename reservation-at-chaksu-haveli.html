@@ -110,6 +110,14 @@
         </div>
   
         <!-- Total Price Container -->
+        <div class="open-from-jan">
+          <div>
+            <h5>"Plan Your Stay: Reservations open starting from January 2025. Secure your dates early for the best availability!"</h5>
+          </div>
+          <a href="./contact-chaksu-haveli.html">
+            <!-- <button class="lets-go-btn">Let's Go</button> -->
+          </a>
+        </div>
         <div class="total-price-container">
           <div class="price" id="totalPrice">Total: ₹0</div>
           <a href="./contact-chaksu-haveli.html">
@@ -171,88 +179,106 @@
       AOS.init();
     </script>
 
-    <script>
-        const calendarBody = document.getElementById("calendarBody");
-        const calendarMonth = document.getElementById("calendarMonth");
-        const prevArrow = document.getElementById("prevArrow");
-        const totalPriceElement = document.getElementById("totalPrice");
-        let currentYear = 2024;
-        let currentMonth = 10;
-        let selectedDays = 0;
-        const pricePerNight = 16000;
-    
-        function loadCalendar(year, month) {
-          // Disable the previous arrow for November 2024
-          if (year === 2024 && month === 10) {
-            prevArrow.classList.add("disabled");
-            prevArrow.onclick = null;
+<script>
+  const calendarBody = document.getElementById("calendarBody");
+  const calendarMonth = document.getElementById("calendarMonth");
+  const prevArrow = document.getElementById("prevArrow");
+  const totalPriceElement = document.getElementById("totalPrice");
+  let currentYear = 2025;
+  let currentMonth = 0;
+  let selectedDays = 0;
+  const pricePerNight = 16000;
+
+  // Define reserved dates in "YYYY-MM-DD" format
+  const reservedDates = [
+    "2025-01-9","2025-01-10","2025-01-11","2025-01-12", "2025-01-20", "2025-01-21", "2025-01-29", "2025-02-05", "2025-02-14","2025-02-15",
+  ];
+
+  function loadCalendar(year, month) {
+    if (year === 2025 && month === 0) {
+      prevArrow.classList.add("disabled");
+      prevArrow.onclick = null;
+    } else {
+      prevArrow.classList.remove("disabled");
+      prevArrow.onclick = previousMonth;
+    }
+
+    calendarBody.innerHTML = "";
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    calendarMonth.textContent = new Date(year, month).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    let date = 1;
+    const currentDate = new Date();
+    for (let i = 0; i < 6; i++) {
+      let row = document.createElement("tr");
+      for (let j = 0; j < 7; j++) {
+        let cell = document.createElement("td");
+        if (i === 0 && j < firstDay) {
+          cell.textContent = "";
+        } else if (date > daysInMonth) {
+          break;
+        } else {
+          const cellDate = new Date(year, month, date);
+          const cellDateStr = `${cellDate.getFullYear()}-${String(cellDate.getMonth() + 1).padStart(2, '0')}-${String(cellDate.getDate()).padStart(2, '0')}`;
+          cell.textContent = date;
+
+          // Check if the date is a reserved date
+          if (reservedDates.includes(cellDateStr)) {
+            cell.classList.add('reserved');
+            cell.onclick = null;
+            
+            // Add "Reserved" label
+            const reservedLabel = document.createElement("span");
+            reservedLabel.textContent = "Reserved";
+            reservedLabel.classList.add("reserved-label");
+            cell.appendChild(reservedLabel);
+          } else if (cellDate < currentDate) {
+            cell.classList.add('passed');
+            cell.onclick = null;
           } else {
-            prevArrow.classList.remove("disabled");
-            prevArrow.onclick = previousMonth;
+            cell.onclick = () => selectDate(cell);
           }
-    
-          calendarBody.innerHTML = "";
-          const firstDay = new Date(year, month, 1).getDay();
-          const daysInMonth = new Date(year, month + 1, 0).getDate();
-          calendarMonth.textContent = new Date(year, month).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-    
-          let date = 1;
-          const currentDate = new Date();
-          for (let i = 0; i < 6; i++) {
-            let row = document.createElement("tr");
-            for (let j = 0; j < 7; j++) {
-              let cell = document.createElement("td");
-              if (i === 0 && j < firstDay) {
-                cell.textContent = "";
-              } else if (date > daysInMonth) {
-                break;
-              } else {
-                const cellDate = new Date(year, month, date);
-                cell.textContent = date;
-    
-                if (cellDate < currentDate) {
-                  cell.classList.add('passed');
-                  cell.onclick = null;
-                } else {
-                  cell.onclick = () => selectDate(cell);
-                }
-                date++;
-              }
-              row.appendChild(cell);
-            }
-            calendarBody.appendChild(row);
-          }
+          date++;
         }
-    
-        function nextMonth() {
-          if (currentMonth === 11) {
-            currentMonth = 0;
-            currentYear++;
-          } else {
-            currentMonth++;
-          }
-          loadCalendar(currentYear, currentMonth);
-        }
-    
-        function previousMonth() {
-          if (currentMonth === 0) {
-            currentMonth = 11;
-            currentYear--;
-          } else {
-            currentMonth--;
-          }
-          loadCalendar(currentYear, currentMonth);
-        }
-    
-        function selectDate(cell) {
-          cell.classList.toggle('selected');
-          selectedDays = document.querySelectorAll('.calendar td.selected').length;
-          const totalPrice = selectedDays * pricePerNight;
-          totalPriceElement.textContent = `Total: ₹${totalPrice.toLocaleString()}`;
-        }
-    
-        loadCalendar(currentYear, currentMonth);
-    </script>
+        row.appendChild(cell);
+      }
+      calendarBody.appendChild(row);
+    }
+  }
+
+  function nextMonth() {
+    if (currentMonth === 11) {
+      currentMonth = 0;
+      currentYear++;
+    } else {
+      currentMonth++;
+    }
+    loadCalendar(currentYear, currentMonth);
+  }
+
+  function previousMonth() {
+    if (currentMonth === 0) {
+      currentMonth = 11;
+      currentYear--;
+    } else {
+      currentMonth--;
+    }
+    loadCalendar(currentYear, currentMonth);
+  }
+
+  function selectDate(cell) {
+    if (!cell.classList.contains('reserved')) {
+      cell.classList.toggle('selected');
+      selectedDays = document.querySelectorAll('.calendar td.selected').length;
+      const totalPrice = selectedDays * pricePerNight;
+      totalPriceElement.textContent = `Total: ₹${totalPrice.toLocaleString()}`;
+    }
+  }
+
+  loadCalendar(currentYear, currentMonth);
+</script>
+
     
   </body>
 </html>
