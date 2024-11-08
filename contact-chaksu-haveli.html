@@ -316,7 +316,10 @@
             <h1>&bull;Contact&bull;<br> <span>Chaksu Haveli</span></h1>
             <div class="underline">
             </div>
-            <form action="#" method="post" id="contact_form">
+
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact_form">
+              <input type="hidden" name="access_key" value="d3c6c601-bc91-471f-8948-9ae878e85ccc">
+
               <div class="name">
                 <label for="name"></label>
                 <input type="text" placeholder="My name is" name="name" id="name_input" required>
@@ -333,9 +336,9 @@
                 <label for="subject"></label>
                 <select placeholder="Subject line" name="subject" id="subject_input" required>
                   <option disabled hidden selected>Subject line</option>
-                  <option>I'd like to start a project</option>
-                  <option>I'd like to ask a question</option>
-                  <option>I'd like to make a proposal</option>
+                  <option>I'd like to make a Reservation</option>
+                  <option>I'd special requests for the stay</option>
+                  <option>I have Questions about our amenities</option>
                 </select>
               </div>
               <div class="message">
@@ -344,8 +347,10 @@
               </div>
               <div class="submit">
                 <input type="submit" value="Send Message" id="form_button" />
+                
               </div>
             </form>
+
           </div>    
       </div>
 
