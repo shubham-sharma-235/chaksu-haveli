@@ -736,7 +736,7 @@ footer{
 
 /* Company Info */
 .footer-company {
-    flex: 1 1 100%;
+    /* flex: 1 1 100%; */
     /* margin-bottom: 1.5rem; */
     text-align: left;
     display: flex;
