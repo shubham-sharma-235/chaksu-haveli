@@ -252,5 +252,12 @@ transition: all ease-in-out .3s;
     margin-left: -10px;
   }
 }
+@media (max-width: 390px) {
+  .calendar-section {
+    flex: 7;
+    padding: 0px;
+    transform: scale(.8);
+  }
+}
 
 
