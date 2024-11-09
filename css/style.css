@@ -895,6 +895,18 @@ footer{
         font-weight: 500;
     }
 
+    .sidebar .logo {
+        font-size: 28px;
+    }
+    .sidebar li {
+        margin-left: 1rem;
+    }
+    .sidebar a {
+        padding: 6px 0;
+        margin-left: 1rem;
+        font-size: 15px;
+    }
+
     /* ------------------------------ */
     
     .common-heading {
