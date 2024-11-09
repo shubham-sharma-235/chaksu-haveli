@@ -12,6 +12,96 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/other-pages.css">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <style>
+      .before-after-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .heading {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 20px 0 40px;
+        color: #7C6F60;
+      }
+  
+      /* Gallery Container */
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        width: 90%;
+        max-width: auto;
+      }
+  
+      /* Image Container */
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+  
+      .container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.5s ease;
+      }
+  
+      .container .after-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+  
+      .container:hover .after-image {
+        opacity: 1;
+      }
+  
+      /* Overlay Text Styling */
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+  
+      .container:hover .overlay {
+        opacity: 0;
+      }
+  
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        .container {
+          max-width: 45%;
+        }
+      }
+  
+      @media (max-width: 600px) {
+        .container {
+          max-width: 90%;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="main">
@@ -92,9 +182,36 @@
         </div>
       </div>
 
+      <div class="before-after-section">
+        <h3 class="heading common-heading">Hotel Restoration <br> Before & After</h3>
+
+        <div class="gallery">
+          <div class="container">
+            <div class="overlay">Hover to see the after view</div>
+            <img src="./images/ch-before-3.JPG" alt="Before Restoration" class="before-image">
+            <img src="./images/ch-after-3.jpg" alt="After Restoration" class="after-image">
+          </div>
+         <div class="container">
+           <div class="overlay">Hover to see the after view</div>
+           <img src="./images/ch-before-1.JPG" alt="Before Restoration" class="before-image">
+           <img src="./images/ch-after-1.jpg" alt="After Restoration" class="after-image">
+         </div>
+         <div class="container">
+           <div class="overlay">Hover to see the after view</div>
+           <img src="./images/ch-before-2.JPG" alt="Before Restoration" class="before-image">
+           <img src="./images/ch-after-2.jpg" alt="After Restoration" class="after-image">
+         </div>
+         <div class="container">
+           <div class="overlay">Hover to see the after view</div>
+           <img src="./images/ch-before-4.JPG" alt="Before Restoration" class="before-image">
+           <img src="./images/ch-after-4.jpg" alt="After Restoration" class="after-image">
+         </div>
+       </div>
+      </div>
+
       <!-- ------------------------- -->
 
-      <footer class="footer" data-aos="fade-up">
+      <footer class="footer" data-aos="fade-up" data-aos-offset="15">
         <div class="footer-container">
           <!-- Left Side: Company Name & Tagline -->
           
