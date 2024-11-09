@@ -18,10 +18,10 @@
 .image-text-container {
     margin-top: 2rem;
 }
-.image-text-container_text h2 {
+/* .image-text-container_text h2 {
     margin: 2rem 0;
     font-size: 2.6vw;
-}
+} */
 .image-text-container_text P{
     margin: 1rem 0;
 }
@@ -41,7 +41,7 @@
         height: 80vh;
     }
     .Hero-heading{
-        font-size: 2vw;
+        font-size: 36px;
     }
     
 }

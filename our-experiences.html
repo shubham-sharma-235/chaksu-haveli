@@ -75,7 +75,7 @@
       <!-- ------------------ -->
 
       <div class="about-section">
-        <div class="common-heading about-us-heading" style="margin-bottom: 1rem;" data-aos="zoom">
+        <div class="common-heading about-us-heading" style="margin-bottom: 1rem;" data-aos="zoom" data-aos-offset="10">
           <h2>Our Other Experiences</h2>
         </div>
 
@@ -86,7 +86,7 @@
         <div
           class="image-text-container_img"
           data-aos="fade-up"
-          data-aos-offset="100"
+          data-aos-offset="10"
           data-aos-delay="100"
           data-aos-duration="700"
           data-aos-easing="ease-in-out"
@@ -100,7 +100,7 @@
         <div
           class="image-text-container_text"
           data-aos="fade-up"
-          data-aos-offset="100"
+          data-aos-offset="10"
           data-aos-delay="120"
           data-aos-duration="800"
           data-aos-easing="ease-in-out"
@@ -124,7 +124,7 @@
         <div
           class="image-text-container_text"
           data-aos="fade-up"
-          data-aos-offset="100"
+          data-aos-offset="10"
           data-aos-delay="120"
           data-aos-duration="800"
           data-aos-easing="ease-in-out"
@@ -144,7 +144,7 @@
         <div
           class="image-text-container_img"
           data-aos="fade-up"
-          data-aos-offset="150"
+          data-aos-offset="10"
           data-aos-delay="100"
           data-aos-duration="700"
           data-aos-easing="ease-in-out"
@@ -161,7 +161,7 @@
         <div
           class="image-text-container_img"
           data-aos="fade-up"
-          data-aos-offset="100"
+          data-aos-offset="10"
           data-aos-delay="100"
           data-aos-duration="700"
           data-aos-easing="ease-in-out"
@@ -175,7 +175,7 @@
         <div
           class="image-text-container_text"
           data-aos="fade-up"
-          data-aos-offset="100"
+          data-aos-offset="10"
           data-aos-delay="120"
           data-aos-duration="800"
           data-aos-easing="ease-in-out"
@@ -198,7 +198,7 @@
         <div
           class="image-text-container_text"
           data-aos="fade-up"
-          data-aos-offset="100"
+          data-aos-offset="10"
           data-aos-delay="120"
           data-aos-duration="800"
           data-aos-easing="ease-in-out"
@@ -220,7 +220,7 @@
         <div
           class="image-text-container_img"
           data-aos="fade-up"
-          data-aos-offset="150"
+          data-aos-offset="10"
           data-aos-delay="100"
           data-aos-duration="700"
           data-aos-easing="ease-in-out"
@@ -236,7 +236,7 @@
         <div
           class="image-text-container_img"
           data-aos="fade-up"
-          data-aos-offset="100"
+          data-aos-offset="10"
           data-aos-delay="100"
           data-aos-duration="700"
           data-aos-easing="ease-in-out"
@@ -250,7 +250,7 @@
         <div
           class="image-text-container_text"
           data-aos="fade-up"
-          data-aos-offset="100"
+          data-aos-offset="10"
           data-aos-delay="120"
           data-aos-duration="800"
           data-aos-easing="ease-in-out"
@@ -317,12 +317,20 @@
       const resizingDiv = document.getElementById('resizingDiv');
       
       window.addEventListener('scroll', () => {
-          // Get the scroll position
-          const scrollPosition = window.scrollY;
-          // Calculate new font size
-          const newFontSize = Math.max(10, 100 - scrollPosition / 10); // Min font size of 20px
-          // Update the font size of the div
-          resizingDiv.style.fontSize = `${newFontSize}px`;
+          // Only apply the font resizing if the screen width is 700px or greater
+          if (window.innerWidth >= 700) {
+              // Get the scroll position
+              const scrollPosition = window.scrollY;
+      
+              // Calculate new font size
+              const newFontSize = Math.max(10, 100 - scrollPosition / 10); // Min font size of 10px
+      
+              // Update the font size of the div
+              resizingDiv.style.fontSize = `${newFontSize}px`;
+          } else {
+              // Set font size to a default for screens less than 700px
+              resizingDiv.style.fontSize = '36px'; // or any other default size you prefer
+          }
       });
     </script>
     

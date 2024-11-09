@@ -75,7 +75,7 @@
       <!-- ------------------ -->
 
       <div class="about-section"  id="about">
-        <div class="common-heading about-us-heading" data-aos="zoom">
+        <div class="common-heading about-us-heading" data-aos="zoom"  data-aos-offset="10">
           <h2>Our Community Impact</h2>
         </div>
         <div class="common-para" data-aos="fade-up" style="width: 60%;">
@@ -131,15 +131,24 @@
     </script>
     <script>   
       const resizingDiv = document.getElementById('resizingDiv');
-      
+
       window.addEventListener('scroll', () => {
-          // Get the scroll position
-          const scrollPosition = window.scrollY;
-          // Calculate new font size
-          const newFontSize = Math.max(10, 100 - scrollPosition / 10); // Min font size of 20px
-          // Update the font size of the div
-          resizingDiv.style.fontSize = `${newFontSize}px`;
+          // Only apply the font resizing if the screen width is 700px or greater
+          if (window.innerWidth >= 700) {
+              // Get the scroll position
+              const scrollPosition = window.scrollY;
+      
+              // Calculate new font size
+              const newFontSize = Math.max(10, 100 - scrollPosition / 10); // Min font size of 10px
+      
+              // Update the font size of the div
+              resizingDiv.style.fontSize = `${newFontSize}px`;
+          } else {
+              // Set font size to a default for screens less than 700px
+              resizingDiv.style.fontSize = '36px'; // or any other default size you prefer
+          }
       });
+
     </script>
     
   </body>
