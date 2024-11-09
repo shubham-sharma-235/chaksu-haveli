@@ -901,10 +901,24 @@ footer{
         font-size: 6vw;
     }
     .common-para{
-        width: 90%;
-        padding: 40px 0;
+        width: 90%!important;
+        padding: 0px 0;
+        padding-top: 30px;
+        font-size: 16px;
         letter-spacing: .02rem;
-        line-height: 1.8rem;
+        line-height: 1.6rem;
+    }
+    .about-section {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+    .about-btn{
+        margin-top: 1rem;
+    }
+    .about-btn a button {
+        width: 80vw !important;
+        height: 3.4rem !important;
+        font-size: .8rem;
     }
     
     /* ------------------------------ */
@@ -959,27 +973,6 @@ footer{
     
     /* ------------------------------ */
 
-    .gift-section {
-        height: 180vh;
-        padding: 2rem;
-    }
-    .gift-container {
-        flex-direction: column-reverse;
-    }
-    .gift-card-left img{
-        height: 90vh;
-        width: 90vw;
-    }
-    .gift-card-right img{
-        height: 40vh;
-        width: 90vw;
-    }
-    .gift-card-content h5 {
-       font-size: 16px;
-    }
-
-    /* ------------------------------ */
-
     .image-text-container{
         flex-direction: column;
         margin-top: 2rem;
@@ -997,6 +990,12 @@ footer{
     .image-text-container_text h2 {
         margin: 1.8rem 0;
         font-size: 8.4vw;
+    }
+    .image-text-container_text p {
+        font-size: 4.2vw;
+        margin: 2.6rem 0;
+        color: var(--body-color);
+        font-weight: 100;
     }
 
 }
