@@ -26,6 +26,10 @@
     font-family: 'arboria-Medium';
     src: url('../fonts/Arboria-Medium.woff2');
 }
+@font-face{
+    font-family: 'queensila';
+    src: url('../fonts/queensila.ttf');
+}
 
 :root{
     --heading-font: 'canela';
@@ -139,7 +143,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.8rem;
 }
 .navbar .nav-logo{
-    font-family: var(--heading-font);
+    font-family: 'queensila';
+    letter-spacing: 3px;
+    font-weight: 100;
+    text-transform: uppercase;
 }
 .navbar a{
     color: #fff;
