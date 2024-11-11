@@ -30,6 +30,9 @@
     .hero-video-desktop{
         display: block;
     }
+    .Hero-heading{
+      display: none;
+    }
     .hero-video {
         height: 60vh;
         display: flex;
