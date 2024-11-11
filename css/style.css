@@ -142,18 +142,17 @@ body::-webkit-scrollbar-thumb {
 .navbar .menu-button i{
     font-size: 1.8rem;
 }
-.navbar .nav-logo{
-    font-family: 'queensila';
-    letter-spacing: 3px;
-    font-weight: 100;
-    text-transform: uppercase;
-}
 .navbar a{
     color: #fff;
     font-size: 1.2rem;
     font-weight: 500;
 }
-
+.navbar .nav-logo{
+    font-family: 'queensila';
+    letter-spacing: 3px;
+    font-weight: 100!important;
+    text-transform: uppercase;
+}
 .hero__bottom{
     position: absolute; /* Center it with absolute positioning */
     top: 50%;
