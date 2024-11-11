@@ -50,6 +50,7 @@ body{
     font-family: var(--body-font);
     background-color: #f5f2eeba;
     overflow-y: none;
+    user-select: none;
 }
 
 html{
