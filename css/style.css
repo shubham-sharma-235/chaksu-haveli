@@ -849,26 +849,26 @@ footer{
 
 
 @media(max-width: 670px){
-    .hero-video{
-        height: 163vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     .hero-video-desktop{
-       display: none;
+        display: none;
     }
     .hero-video-mobile{
         display: block;
     }
-    
+    /* .hero-video{
+        height: 163vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
     .hero-video video{
         position: relative;
         top: 0;
-        /* left: 0; */
         height: 100%;
         width: 100%;
-    }
+        width: 120vw;
+    } */
     .hero__bottom {
         position: absolute;
         top: 50%;
@@ -889,12 +889,15 @@ footer{
     .navbar{
         width: 100vw;
         padding: 10px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .navbar .menu-button i{
         font-size: 1.4rem;
     }
-    .navbar .nav-logo{
-        font-size: .8rem;
+    .navbar .nav-logo a{
+        font-size: .7rem;
     }
     .navbar a{
         color: #fff;
