@@ -71,3 +71,22 @@ function autoScroll() {
 
 // Set up interval for auto-scrolling
 setInterval(autoScroll, pauseTime);
+
+// ====================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const loadingAnimation = document.getElementById("loadingAnimation");
+  const videoDesktop = document.getElementById("videoDesktop");
+  const videoMobile = document.getElementById("videoMobile");
+
+  // Function to hide the loading animation
+  function hideLoadingAnimation() {
+    loadingAnimation.style.display = "none";
+  }
+
+  // Check if videos are ready to play
+  videoDesktop.addEventListener("canplaythrough", hideLoadingAnimation);
+  videoMobile.addEventListener("canplaythrough", hideLoadingAnimation);
+});
+  
+

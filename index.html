@@ -14,25 +14,33 @@
   </head>
   <body>
     <div class="main">
+      
       <div class="hero-section">
+        <div class="loading-animation" id="loadingAnimation">
+          <!-- Loading Spinner -->
+          <div class="spinner"></div>
+        </div>
         <div class="hero-video">
           <video
-          class="hero-video-desktop"
+            class="hero-video-desktop"
             src="./video/chaksu-haveli-movie.webm"
             autoplay
             muted
-            loop 
+            loop
+            id="videoDesktop"
           ></video>
           <video
-          class="hero-video-mobile"
+            class="hero-video-mobile"
             src="./video/chaksu-haveli-movie-mobile-resolution.webm"
             autoplay
             muted
             loop
+            id="videoMobile"
           ></video>
           <div class="Hero-heading" id="resizingDiv">Chaksu Haveli</div>
         </div>
       </div>
+      
 
       <div class="hero__bottom">
           <a href="#about">
