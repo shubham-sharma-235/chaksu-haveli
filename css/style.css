@@ -748,8 +748,23 @@ video {
 
 /* ------------------------------- */
 
-footer{
+.bottom-image-gallery{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin-top: 4rem;
+}
+.bottom-image-gallery img{
+    height: 50vh;
+    width: 20vw;
+}
+
+/* ------------------------------- */
+
+footer{
+    /* margin-top: 4rem; */
     border-top: 3rem #796c5c solid;
 }
 
@@ -1063,6 +1078,21 @@ footer{
     }
     .image-text-container_text p br{
         display: none;
+    }
+
+    /* ----------------------------- */
+
+    .bottom-image-gallery{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 4rem;
+    }
+    .bottom-image-gallery img{
+        height: 16vh;
+        width: 20vw;
     }
 
 }
